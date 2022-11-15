@@ -29,6 +29,7 @@ function Homepage(){
 
             <br/>
             <br/>
+            <h2> Leaderboard </h2>
             <table class="table">
                 <thead>
                     <tr>
@@ -55,7 +56,7 @@ function Homepage(){
                     </tr>
                 </tbody>
             </table>
-            
+
             <br/>
             <br/>
             <div>
@@ -68,12 +69,6 @@ function Homepage(){
                 <h2> Locations of other ESW Arcade Games! </h2>
             </div>
         </div>
-
-        /**
-         * Add in contact details for club so people can sign up
-         * Add in info about why we are collecting the pop can tabs
-         * Add in locations of the other arcade games
-        */
     );
 };
 
