@@ -1,0 +1,9 @@
+Resources for app
+Colours:
+
+ESW Green: #21BF27
+Black: #000000
+White: #FFFFFF
+
+Logos and Images
+ - Can be found in src/images folder

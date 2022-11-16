@@ -1,5 +1,7 @@
 import * as React from "react";
 import { Routes, Route, useParams } from "react-router-dom";
+import './homepage.css'; // Tell webpack that Button.js uses these styles
+
 
 function Homepage(){
     const params = useParams();
@@ -29,6 +31,19 @@ function Homepage(){
 
             <br/>
             <br/>
+            <div>
+                <div class="toggle-button-cover">
+                    <div class="button-cover">
+                        <div class="button r" id="button-3">
+                            <input type="checkbox" class="checkbox" />
+                            <div class="knobs"></div>
+                            <div class="layer"></div>
+                        </div>
+                    </div>
+                </div>
+                <h5> Find yourself</h5>
+            </div>
+            <h2> Leaderboard </h2>
             <table class="table">
                 <thead>
                     <tr>
@@ -55,7 +70,7 @@ function Homepage(){
                     </tr>
                 </tbody>
             </table>
-            
+
             <br/>
             <br/>
             <div>
@@ -68,12 +83,6 @@ function Homepage(){
                 <h2> Locations of other ESW Arcade Games! </h2>
             </div>
         </div>
-
-        /**
-         * Add in contact details for club so people can sign up
-         * Add in info about why we are collecting the pop can tabs
-         * Add in locations of the other arcade games
-        */
     );
 };
 
