@@ -1,4 +1,4 @@
-import './App.css';
+import './pages/styles/app.css';
 import * as React from "react";
 import { Routes, Route, useParams } from "react-router-dom";
 import Homepage from './pages/homepage.js';
@@ -7,9 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
   return (
-    <div style={{
-      backgroundColor: 'white'
-    }}>
+    <div className="mainDiv">
       <img
         src={require("./images/horizontal_ESW_Logo.png")}
         style={{width: '100%'}}
