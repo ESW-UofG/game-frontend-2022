@@ -2,19 +2,24 @@ import * as React from "react";
 import { Routes, Route, useParams } from "react-router-dom";
 import './styles/homepage.css'; // Tell webpack that Button.js uses these styles
 
+function getWindowDimensions() {
+    const { innerWidth: width, innerHeight: height } = window;
+    return [width, height]
+  }
+
 
 function Homepage(){
     const params = useParams();
     console.log(params);
 
     return(
-        <div>
+        <div style={{width: getWindowDimensions()[0], height: getWindowDimensions()[1]}}>
             <br/>
             <h2>
                 Quick facts!
             </h2>
 
-            <h5>
+            <h5 id="stats-div">
                 <div>
                     Number of wins: {params.numWins}
                 </div>
