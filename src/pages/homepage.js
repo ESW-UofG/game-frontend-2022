@@ -1,11 +1,7 @@
 import * as React from "react";
 import { Routes, Route, useParams } from "react-router-dom";
 import './styles/homepage.css'; // Tell webpack that Button.js uses these styles
-
-function getWindowDimensions() {
-    const { innerWidth: width, innerHeight: height } = window;
-    return [width, height]
-  }
+import { Container } from 'react-bootstrap';
 
 
 function Homepage(){
@@ -13,7 +9,7 @@ function Homepage(){
     console.log(params);
 
     return(
-        <div style={{width: getWindowDimensions()[0], height: getWindowDimensions()[1]}}>
+        <Container>
             <br/>
             <h2>
                 Quick facts!
@@ -91,7 +87,7 @@ function Homepage(){
             <div>
                 <h2> Locations of other ESW Arcade Games! </h2>
             </div>
-        </div>
+        </Container>
     );
 };
 

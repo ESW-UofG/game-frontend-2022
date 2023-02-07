@@ -10,7 +10,7 @@ const App = () => {
     <div className="mainDiv">
       <img
         src={require("./images/horizontal_ESW_Logo.png")}
-        style={{width: '100%'}}
+        style={{width: '50%', textAlign: 'center'}}
       />
       <h1>Welcome to the ESW's scoreboard server!</h1>
       <section className="App">
