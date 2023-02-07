@@ -1,16 +1,17 @@
-import './App.css';
+import './pages/styles/app.css';
 import * as React from "react";
-import { Routes, Route} from "react-router-dom";
+import { Routes, Route, useParams } from "react-router-dom";
 import Homepage from './pages/homepage.js';
 import UserPage from './pages/userPage.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
   return (
-    <div>
-      <div className='image-container'>
-        <img className="header-image" src={require("./images/horizontal_ESW_Logo.png")} alt="ESW logo"/>
-      </div>
+    <div className="mainDiv">
+      <img
+        src={require("./images/horizontal_ESW_Logo.png")}
+        style={{width: '100%'}}
+      />
       <h1>Welcome to the ESW's scoreboard server!</h1>
       <section className="App">
         <Routes>

@@ -1,6 +1,11 @@
 import * as React from "react";
-import { useParams } from "react-router-dom";
+import { Routes, Route, useParams } from "react-router-dom";
 import './styles/homepage.css'; // Tell webpack that Button.js uses these styles
+
+function getWindowDimensions() {
+    const { innerWidth: width, innerHeight: height } = window;
+    return [width, height]
+  }
 
 
 function Homepage(){
@@ -8,27 +13,72 @@ function Homepage(){
     console.log(params);
 
     return(
-        <div>
-            <div className="fact-container">
-                <h4>
-                    Quick facts!
-                </h4>
+        <div style={{width: getWindowDimensions()[0], height: getWindowDimensions()[1]}}>
+            <br/>
+            <h2>
+                Quick facts!
+            </h2>
+
+            <h5 id="stats-div">
                 <div>
-                    <h4>Number of wins: {params.numWins}</h4>
+                    Number of wins: {params.numWins}
                 </div>
                 <div>
-                    <h4>Number prizes avalible: {params.currentPrizes}</h4>
+                    Number of prizes avalible: {params.currentPrizes}
                 </div>
                 <div>
-                    <h4>Number prizes given out: {params.prizesGiven}</h4>
+                    Number of prizes given out: {params.prizesGiven}
                 </div>
                 <div>
-                    <h4>Weight of pop can tabs collected: {params.tabWeight}</h4>
+                    Weight of pop can tabs collected: {params.tabWeight}
+                </div>
+            </h5>
+
+            <br/>
+            <br/>
+            <div>
+                <h5> Find yourself</h5>
+                <div id="app-cover">
+                    <div class="row">
+                        <div class="toggle-button-cover">
+                        <div class="button-cover">
+                            <div class="button r" id="button-3">
+                            <input type="checkbox" class="checkbox" />
+                            <div class="knobs"></div>
+                            <div class="layer"></div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-
             <h2> Leaderboard </h2>
-            
+            <table class="table">
+                <thead>
+                    <tr>
+                    <th scope="col">Rank</th>
+                    <th scope="col">Username</th>
+                    <th scope="col">Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>157</td>
+                    </tr>
+                    <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>148</td>
+                    </tr>
+                    <tr>
+                    <th scope="row">3</th>
+                    <td>Larry</td>
+                    <td>109</td>
+                    </tr>
+                </tbody>
+            </table>
 
             <br/>
             <br/>
