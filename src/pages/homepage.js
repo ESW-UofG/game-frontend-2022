@@ -1,8 +1,11 @@
 import * as React from "react";
-import { Routes, Route, useParams } from "react-router-dom";
+import {useParams } from "react-router-dom";
 import './styles/homepage.css'; // Tell webpack that Button.js uses these styles
 import { Container } from 'react-bootstrap';
 
+
+// Params will not be used for this.
+// We need to do a database call here, and update the tables accordingly
 
 function Homepage(){
     const params = useParams();
