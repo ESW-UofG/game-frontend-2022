@@ -16,7 +16,7 @@ const App = () => {
       <section className="App">
         <Routes>
           <Route exact path="/" element={<Homepage/>} />
-          <Route exact path="/plinko_game/:userId" element={<UserPage/>} />
+          <Route path="/plinko_game/:userId/*" element={<UserPage/>} />
         </Routes>
       </section>
     </div>

@@ -7,14 +7,20 @@ import './styles/userPage.css';
 
 function UserPage(){
     const params = useParams();
-    console.log(params);
-  
+    let winningHash = params.userId.split(":")[1];
+    //let points = params.points.split(":")[1];
+
+    // handleSubmit(event) {
+    //   alert('A name was submitted: ' + this.state.value);
+    //   event.preventDefault();
+    // }
+
     return(
       <div>
          <h2>
-          Your win Hash is: {params.userId}
+          Your win Hash is: {winningHash}
         </h2>
-  
+
         <br/>
         <h4>Enter your email below to claim your points!</h4>
         {/* Sends url info to the server. */}
