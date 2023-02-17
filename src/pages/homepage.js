@@ -2,6 +2,8 @@ import * as React from "react";
 import {useParams } from "react-router-dom";
 import './styles/homepage.css'; // Tell webpack that Button.js uses these styles
 import { Container } from 'react-bootstrap';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
 
 
 // Params will not be used for this.
@@ -20,7 +22,7 @@ function Homepage(){
 
             <h5 id="stats-div">
                 <div>
-                    Number of wins: {params.numWins}
+                    Number of wins: {params.numWins} 
                 </div>
                 <div>
                     Number of prizes avalible: {params.currentPrizes}
@@ -37,20 +39,24 @@ function Homepage(){
             <br/>
             <div>
                 <h5> Find yourself</h5>
-                <div id="app-cover">
-                    <div class="row">
-                        <div class="toggle-button-cover">
-                        <div class="button-cover">
-                            <div class="button r" id="button-3">
-                            <input type="checkbox" class="checkbox" />
-                            <div class="knobs"></div>
-                            <div class="layer"></div>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                </div>
+                <div> 
+                    <Form>
+                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Label>Email address</Form.Label>
+                        <Form.Control type="email" id="email" placeholder="Enter email" />
+                        <Form.Text className="text-muted">
+                        We'll never share your email with anyone else.
+                        </Form.Text>
+                     </Form.Group> </Form> </div>
+         
             </div>
+            <Button variant="primary" type="submit">
+            Submit
+            </Button>
+            
+            <br/>
+            <br/>
+
             <h2> Leaderboard </h2>
             <table class="table">
                 <thead>
