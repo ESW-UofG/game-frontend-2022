@@ -2,7 +2,7 @@ import * as React from "react";
 import {useParams } from "react-router-dom";
 import './styles/homepage.css'; // Tell webpack that Button.js uses these styles
 import { Container } from 'react-bootstrap';
-
+import Map from "../components/Map";
 
 // Params will not be used for this.
 // We need to do a database call here, and update the tables accordingly
@@ -87,8 +87,9 @@ function Homepage(){
                 <h5> Meeting Details: Thornborough Building, Room 1002 Every Tuesday at 6:00pm</h5>
             </div>
 
-            <div>
+            <div id="homepage-map">
                 <h2> Locations of other ESW Arcade Games! </h2>
+                <Map/>
             </div>
         </Container>
     );
