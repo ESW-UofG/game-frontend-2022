@@ -89,7 +89,16 @@ function Homepage(){
             <br/>
             <div>
                 <h2> How to contact us! </h2>
-                <h5> Email: </h5>
+             {/*    <h5> Email: </h5> */}
+             <h5> Links: </h5>
+             <br/>
+             <a href="https://www.instagram.com/esw_uog" target="_blank">
+                <Button> instagram link </Button> 
+            </a>
+            <br/>
+            <br/>
+
+
                 <h5> Meeting Details: Thornborough Building, Room 1002 Every Tuesday at 6:00pm</h5>
             </div>
 
