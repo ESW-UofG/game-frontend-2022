@@ -6,6 +6,7 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
 
+
 // Params will not be used for this.
 // We need to do a database call here, and update the tables accordingly
 
@@ -93,8 +94,9 @@ function Homepage(){
              <h5> Links: </h5>
              <br/>
              <a href="https://www.instagram.com/esw_uog" target="_blank">
-                <Button> instagram link </Button> 
+                <Button> instagram link </Button>
             </a>
+
             <br/>
             <br/>
 
