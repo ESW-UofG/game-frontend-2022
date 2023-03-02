@@ -24,6 +24,10 @@ body {
   display: table-row;
 }
 
+#homepage-map{
+  padding-bottom: 5%;
+}
+
 .toggle-button-cover {
   display: table-cell;
   position: relative;
