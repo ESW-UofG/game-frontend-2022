@@ -13,11 +13,13 @@ function UserPage(){
     const [email, setEmail] = useState("");
 
 
-    const emailChange = event => {
+    const handleEmailChange = event => {
+      console.log(event.target.value);
       setEmail(event.target.value);
     };
-
-    const nameChange = event => {
+  
+    // Event handler for name input field
+    const handleNameChange = event => {
       setName(event.target.value);
     };
 
@@ -33,7 +35,10 @@ function UserPage(){
       axios.post(url)
       .then(res => {
         const data = res.data;
-        if (data.status !== "success"){
+        if (data.status === "Success"){
+          alert("Success! Points added");
+        }
+        else{
           alert("Error. Points not added... Returning to homepage...");
         }
       })
@@ -55,7 +60,7 @@ function UserPage(){
           <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3">
               <Form.Label>Email address</Form.Label>
-              <Form.Control type="email"  name="email" id="email" placeholder="Enter email"/>
+              <Form.Control type="email" name="email" id="email" placeholder="Enter email" onChange={handleEmailChange}/>
               <Form.Text className="text-muted">
                 We'll never share your email with anyone else.
               </Form.Text>
@@ -63,7 +68,7 @@ function UserPage(){
 
             <Form.Group className="mb-3">
               <Form.Label>Username</Form.Label>
-              <Form.Control type="username" name="username" placeholder="Username"/>
+              <Form.Control type="username" name="username" placeholder="Username" onChange={handleNameChange}/>
             </Form.Group>
             <Button variant="primary" type="submit">
               Submit
