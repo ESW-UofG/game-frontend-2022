@@ -13,10 +13,7 @@ import axios from 'axios';
 async function getDynamoDBData() {
     const response = await axios.get('http://127.0.0.1:8000/getScores');
     return response.data;
-  }
-
-
-
+}
 
 function Homepage(){
     const params = useParams();
@@ -29,7 +26,6 @@ function Homepage(){
         const data = await getDynamoDBData();
         setDynamoData(data);
         }
-
 
         fetchData();
     }, []);
@@ -63,12 +59,13 @@ function Homepage(){
                 <div> 
                     <Form>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Label>Email address</Form.Label>
-                        <Form.Control type="email" id="email" placeholder="Enter email" />
-                        <Form.Text className="text-muted">
-                        We'll never share your email with anyone else.
-                        </Form.Text>
-                     </Form.Group> </Form> </div>
+                            <Form.Label>Email address</Form.Label>
+                            <Form.Control type="email" id="email" placeholder="Enter email" />
+                            <Form.Text className="text-muted">
+                            We'll never share your email with anyone else.
+                            </Form.Text>
+                        </Form.Group>
+                    </Form> </div>
          
             </div>
             <Button variant="primary" type="submit">
@@ -100,7 +97,6 @@ function Homepage(){
             <br/>
             <div>
                 <h2> How to contact us! </h2>
-             {/*    <h5> Email: </h5> */}
                 <h5> Links: </h5>
                 <br/>
                 <div class = "flex-direction: column">
@@ -110,9 +106,6 @@ function Homepage(){
                         width = "50"
                         length = "50"
                         />
-                    
-
-                    
                     </a>
 
                     <a href="https://www.facebook.com/eswhq/" target="_blank">
@@ -123,12 +116,8 @@ function Homepage(){
                         />
                     </a>
                 </div>
-            
-
                 <br/>
                 <br/>
-
-
                 <h5> Meeting Details: Thornborough Building, Room 1002 Every Tuesday at 6:00pm</h5>
             </div>
 

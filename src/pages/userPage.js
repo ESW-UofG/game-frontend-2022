@@ -12,7 +12,6 @@ function UserPage(){
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
 
-
     const handleEmailChange = event => {
       console.log(event.target.value);
       setEmail(event.target.value);
